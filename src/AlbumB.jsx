@@ -48,7 +48,7 @@ function AlbumB(){
                         name: "Never Say Die!",
                         year: "1978",
                         image: "https://www.emp-online.it/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dwa863dd77/images/4/8/0/5/480551a.jpg?sfrm=png",
-                        album: "https://open.spotify.com/embed/album/42aY1pEcjp3GWENE6LUPnx"
+                        album: "https://open.spotify.com/embed/album/3L6ss776rbc4BlupPEDOLw?utm_source=generator&si=a3b288fdbe384981"
                 },
                 {
                         name: "13",
