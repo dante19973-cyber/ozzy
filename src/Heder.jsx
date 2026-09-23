@@ -1,3 +1,4 @@
+import './heder.css'
 function Heder(){
     return (
         <header>
@@ -5,14 +6,16 @@ function Heder(){
                 <ul>
                     <li><a href="#home">Головна</a></li>
                     <li><a href="#life">Життєвий шлях</a></li>
-                    <li>Група
-                        <ul>
+                    <li className="burger">
+                        <span className="burgerName">Групи</span>
+                        <ul className="burgerList">
                             <li><a href="#blackS">Black Sabbath</a></li>
                             <li><a href="#ozzyO">Ozzy Osbourne</a></li>
                         </ul>
                     </li>
-                    <li>Альбоми
-                        <ul>
+                    <li className="burger">
+                        <span className="burgerName">Альбоми</span>
+                        <ul className="burgerList">
                             <li><a href="#albumB">Black Sabbath</a></li>
                             <li><a href="#albumO">Ozzy Osbourne</a></li>
                         </ul>

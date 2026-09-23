@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import Heder from "./Heder.jsx";
 import Home from "./Home.jsx";
 import Life from "./Life.jsx";

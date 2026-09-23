@@ -1,0 +1,112 @@
+/* ==========================================================================
+   HEADER (heder.css): sticky navbar with blur + dropdown menus
+   ========================================================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* above iframes and content; dropdowns rise with it */
+  background: rgba(11, 11, 11, 0.82);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-blood);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* main menu: one centred row */
+header > div > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem 1.75rem;
+  min-height: var(--header-h);
+  padding: 0 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+/* links and dropdown titles share one look */
+header a,
+.burgerName {
+  display: block;
+  padding: 0.5rem 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--color-text);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+header a:hover,
+.burger:hover > .burgerName {
+  color: var(--color-gold-bright);
+  border-bottom-color: var(--color-gold);
+  text-shadow: var(--glow-gold);
+}
+
+/* dropdown arrow */
+.burgerName::after {
+  content: '\25BE';
+  margin-left: 0.4rem;
+  font-size: 0.75em;
+  color: var(--color-blood-bright);
+}
+
+.burger {
+  position: relative; /* anchor for the dropdown */
+}
+
+/* dropdown panel: hidden until hover / keyboard focus */
+.burgerList {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 190px;
+  margin: 0;
+  padding: 0.4rem 0;
+  list-style: none;
+  background: #141414;
+  border: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-blood);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
+  z-index: 110;
+}
+
+.burger:hover .burgerList,
+.burger:focus-within .burgerList {
+  display: block;
+}
+
+.burgerList li a {
+  padding: 0.6rem 1.1rem;
+  border-bottom: 0;
+  border-left: 3px solid transparent;
+}
+
+.burgerList li a:hover {
+  background: #1f1f1f;
+  border-left-color: var(--color-gold);
+}
+
+/* last dropdown opens leftwards so it never leaves the screen */
+.burger:last-child .burgerList {
+  left: auto;
+  right: 0;
+}
+
+@media (max-width: 720px) {
+  header > div > ul {
+    gap: 0 1rem;
+  }
+
+  header a,
+  .burgerName {
+    font-size: 0.85rem;
+  }
+}

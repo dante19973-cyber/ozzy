@@ -6,7 +6,7 @@ function Album ({name, year, image,album}){
             <h2>{year}</h2>
             <iframe data-testid="embed-iframe"
                     src={album}
-                    width="100%" height="152" frameBorder="0" allowFullScreen=""
+                    width="90%" height="152" frameBorder="0" allowFullScreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
         </section>

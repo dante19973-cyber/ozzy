@@ -17,7 +17,7 @@ function Life (){
                     <li><strong>Зала слави рок-н-ролу: </strong>Він є одним із небагатьох музикантів, кого до Зали слави вносили двічі: спочатку у 2006 році як учасника Black Sabbath, а згодом — за його сольні досягнення.</li>
                 </ul>
                 <h2>Кумедні моменти</h2>
-                <ul className="fun-list"></ul>
+                <ul className="fun-list">
                 <li>
                     <iframe
                         src="https://www.youtube.com/embed/NJHWbjDPmmQ"
@@ -42,6 +42,7 @@ function Life (){
                         allowFullScreen
                     ></iframe>
                 </li>
+                </ul>
             </section>
         </section>
     )
